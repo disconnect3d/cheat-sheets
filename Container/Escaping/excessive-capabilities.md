@@ -18,6 +18,8 @@ $ capsh --print | grep Current
 
 Privileged containers can register usermode application helpers that are executed in the kernel context, for more information on invoking user-space applications from kernel see [here](https://developer.ibm.com/technologies/linux/articles/l-user-space-apps/).
 
+**Note:** The following text contains excerpts and information taken from Trail of Bits' blog post titled ["Understanding Docker container escapes"](https://blog.trailofbits.com/2019/07/19/understanding-docker-container-escapes/) written by Dominik Czarnota on 2019.07.19.
+
 The [@_fel1x](https://twitter.com/_fel1x/status/1151487051986087936) escape technique is based on abusing the functionality of the `notify_on_release` feature in cgroups v1 to run the exploit as a fully privileged root user.
 
 Here is a version of the PoC that launches `ps` on the host:
